@@ -1,7 +1,7 @@
-
+import Container from "./containers/Container";
 
 function App() {
-	return <div>hello</div>;
+	return <Container />;
 }
 
 export default App;
