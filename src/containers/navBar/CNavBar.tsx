@@ -7,10 +7,16 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import IconContainer, { MenuIconContainer } from "../../components/Icons";
 import styles from "./style";
 import externalURLS from "../../services/externalURLS";
+import NavDrawer from "../navDrawer/NavDrawer";
+import { useState } from "react";
 
 function CNavBar() {
 	const mobile = useMediaQuery("(min-width:600px)");
 	const classes = styles;
+	const [openDrawer, setOpenDrawer] = useState(false);
+	const handleDrawer = () => {
+		setOpenDrawer(!openDrawer);
+	};
 	return (
 		<Box
 			sx={{
@@ -18,6 +24,8 @@ function CNavBar() {
 				bottom: mobile ? "" : "10px",
 			}}
 		>
+			<NavDrawer open={openDrawer} handleDrawer={handleDrawer} />
+
 			<Grid container justifyContent="space-between" alignItems="center">
 				<Grid item></Grid>
 				<Grid item>
@@ -49,6 +57,7 @@ function CNavBar() {
 									classes={classes.hover}
 									icon={
 										<MenuIcon
+											onClick={handleDrawer}
 											sx={{
 												fontSize: "30px",
 											}}
@@ -61,7 +70,10 @@ function CNavBar() {
 				</Grid>
 				<Grid item>
 					{mobile && (
-						<MenuIcon sx={{ ...classes.desktopMenu, ...classes.hover }} />
+						<MenuIcon
+							sx={{ ...classes.desktopMenu, ...classes.hover }}
+							onClick={handleDrawer}
+						/>
 					)}
 				</Grid>
 			</Grid>

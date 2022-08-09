@@ -21,7 +21,7 @@ const theme = createTheme({
     },
     secondary: {
       main: "#eeeeee",
-      light: "red",
+      light: "#2f2f2f",
     },
     text: {
       primary: "#cacaca",
@@ -30,7 +30,7 @@ const theme = createTheme({
   },
   typography: {
     h1:{
-      fontSize: "70px",
+      fontSize: "50px",
       fontWeight: '400'
     }, 
     h2:{
