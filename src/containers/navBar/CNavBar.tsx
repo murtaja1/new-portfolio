@@ -6,6 +6,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import IconContainer, { MenuIconContainer } from "../../components/Icons";
 import styles from "./style";
+import externalURLS from "../../services/externalURLS";
 
 function CNavBar() {
 	const mobile = useMediaQuery("(min-width:600px)");
@@ -20,21 +21,32 @@ function CNavBar() {
 			<Grid container justifyContent="space-between" alignItems="center">
 				<Grid item></Grid>
 				<Grid item>
-					<Grid container alignItems="center" justifyContent="space-between">
-						<LinkedInIcon
-							sx={{ ...classes.regularIcon, ...classes.hover }}
-							onClick={() => console.log("dddddddd")}
-						/>
-						<FacebookIcon sx={{ ...classes.regularIcon, ...classes.hover }} />
+					<Grid container alignItems="center" alignSelf="center">
+						<a href={externalURLS.linkedIn} target="_blank">
+							<LinkedInIcon sx={{ ...classes.regularIcon, ...classes.hover }} />
+						</a>
+						<a href={externalURLS.facebook} target="_blank">
+							<FacebookIcon sx={{ ...classes.regularIcon, ...classes.hover }} />
+						</a>
 						<Box sx={{ width: "5px" }} />
-
-						<IconContainer icon={<GitHubIcon sx={classes.customIcon} />} />
+						<a href={externalURLS.github} target="_blank">
+							<IconContainer
+								classes={classes.hover}
+								icon={<GitHubIcon sx={classes.customIcon} />}
+							/>
+						</a>
 						<Box sx={{ width: "10.5px" }} />
-						<IconContainer icon={<TwitterIcon sx={classes.customIcon} />} />
+						<a href={externalURLS.twitter} target="_blank">
+							<IconContainer
+								classes={classes.hover}
+								icon={<TwitterIcon sx={classes.customIcon} />}
+							/>
+						</a>
 						{!mobile && (
 							<>
 								<Box sx={{ width: "10.5px" }} />
 								<MenuIconContainer
+									classes={classes.hover}
 									icon={
 										<MenuIcon
 											sx={{
@@ -48,7 +60,9 @@ function CNavBar() {
 					</Grid>
 				</Grid>
 				<Grid item>
-					{mobile && <MenuIcon sx={{ ...classes.desktopMenu }} />}
+					{mobile && (
+						<MenuIcon sx={{ ...classes.desktopMenu, ...classes.hover }} />
+					)}
 				</Grid>
 			</Grid>
 		</Box>

@@ -5,6 +5,7 @@ const styles = {
 		width: "100%",
 	},
 	regularIcon: {
+		marginTop: "5px",
 		fontSize: "45px",
 		color: "primary.light",
 	},
@@ -13,14 +14,15 @@ const styles = {
 		color: "primary.main",
 	},
 	desktopMenu: {
+    cursor:"pointer",
 		fontSize: "35px",
 		marginTop: "9px",
 		marginRight: "30px",
 	},
 	hover: {
-		transitionDuration: "1s",
+		transitionDuration: "0.5s",
+		transitionProperty: "transform",
 		"&:hover": {
-			transitionDuration: "1s",
 			transform: "scale(1.2)",
 			WebkitTransform: "scale(1.2)",
 		},
