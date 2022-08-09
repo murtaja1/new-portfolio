@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import About from "./about/About";
 import Contact from "./contact/Contact";
 import Home from "./home/Home";
 import CNavBar from "./navBar/CNavBar";
@@ -14,7 +13,6 @@ function Container() {
 			<CNavBar />
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/about" element={<About />} />
 				<Route path="/work" element={<Work />} />
 				<Route path="/skills" element={<Skills />} />
 				<Route path="/contact" element={<Contact />} />
