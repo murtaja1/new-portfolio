@@ -1,7 +1,7 @@
 import { CssBaseline } from "@mui/material";
 import Container from "./containers/Container";
 import ThemeWrapper from "./theme/ThemeWrapper";
-import CParticles from "./services/CParticles";
+import CParticles from "./components/CParticles";
 
 function App() {
 	return (
