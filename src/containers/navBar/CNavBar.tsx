@@ -9,6 +9,7 @@ import styles from "./style";
 import externalURLS from "../../services/externalURLS";
 import NavDrawer from "../navDrawer/NavDrawer";
 import { useState } from "react";
+const Fade = require("react-reveal/Fade");
 
 function CNavBar() {
 	const mobile = useMediaQuery("(min-width:600px)");
@@ -31,49 +32,65 @@ function CNavBar() {
 				<Grid item>
 					<Grid container alignItems="center" alignSelf="center">
 						<a href={externalURLS.linkedIn} target="_blank">
-							<LinkedInIcon sx={{ ...classes.regularIcon, ...classes.hover }} />
+							<Fade delay={50} top>
+								<LinkedInIcon
+									sx={{ ...classes.regularIcon, ...classes.hover }}
+								/>
+							</Fade>
 						</a>
 						<a href={externalURLS.facebook} target="_blank">
-							<FacebookIcon sx={{ ...classes.regularIcon, ...classes.hover }} />
+							<Fade delay={60} top>
+								<FacebookIcon
+									sx={{ ...classes.regularIcon, ...classes.hover }}
+								/>
+							</Fade>
 						</a>
 						<Box sx={{ width: "5px" }} />
 						<a href={externalURLS.github} target="_blank">
-							<IconContainer
-								classes={classes.hover}
-								icon={<GitHubIcon sx={classes.customIcon} />}
-							/>
+							<Fade delay={70} top>
+								<IconContainer
+									classes={classes.hover}
+									icon={<GitHubIcon sx={classes.customIcon} />}
+								/>
+							</Fade>
 						</a>
 						<Box sx={{ width: "10.5px" }} />
 						<a href={externalURLS.twitter} target="_blank">
-							<IconContainer
-								classes={classes.hover}
-								icon={<TwitterIcon sx={classes.customIcon} />}
-							/>
+							<Fade delay={80} top>
+								<IconContainer
+									classes={classes.hover}
+									icon={<TwitterIcon sx={classes.customIcon} />}
+								/>
+							</Fade>
 						</a>
 						{!mobile && (
 							<>
 								<Box sx={{ width: "10.5px" }} />
-								<MenuIconContainer
-									classes={classes.hover}
-									icon={
-										<MenuIcon
-											onClick={handleDrawer}
-											sx={{
-												fontSize: "30px",
-											}}
-										/>
-									}
-								/>
+								<Fade delay={90} right>
+									<MenuIconContainer
+										classes={classes.hover}
+										icon={
+											<MenuIcon
+												onClick={handleDrawer}
+												sx={{
+													fontSize: "30px",
+												}}
+											/>
+										}
+									/>
+								</Fade>
 							</>
 						)}
 					</Grid>
 				</Grid>
 				<Grid item>
 					{mobile && (
-						<MenuIcon
-							sx={{ ...classes.desktopMenu, ...classes.hover }}
-							onClick={handleDrawer}
-						/>
+						<Fade delay={100} right>
+							<MenuIcon
+								sx={{ ...classes.desktopMenu, ...classes.hover }}
+								onClick={handleDrawer}
+							/>
+						</Fade>
 					)}
 				</Grid>
 			</Grid>
