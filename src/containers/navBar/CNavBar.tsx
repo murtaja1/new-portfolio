@@ -32,14 +32,14 @@ function CNavBar() {
 				<Grid item>
 					<Grid container alignItems="center" alignSelf="center">
 						<a href={externalURLS.linkedIn} target="_blank">
-							<Fade delay={50} top>
+							<Fade delay={10} top>
 								<LinkedInIcon
 									sx={{ ...classes.regularIcon, ...classes.hover }}
 								/>
 							</Fade>
 						</a>
 						<a href={externalURLS.facebook} target="_blank">
-							<Fade delay={60} top>
+							<Fade delay={20} top>
 								<FacebookIcon
 									sx={{ ...classes.regularIcon, ...classes.hover }}
 								/>
@@ -47,7 +47,7 @@ function CNavBar() {
 						</a>
 						<Box sx={{ width: "5px" }} />
 						<a href={externalURLS.github} target="_blank">
-							<Fade delay={70} top>
+							<Fade delay={30} top>
 								<IconContainer
 									classes={classes.hover}
 									icon={<GitHubIcon sx={classes.customIcon} />}
@@ -56,7 +56,7 @@ function CNavBar() {
 						</a>
 						<Box sx={{ width: "10.5px" }} />
 						<a href={externalURLS.twitter} target="_blank">
-							<Fade delay={80} top>
+							<Fade delay={40} top>
 								<IconContainer
 									classes={classes.hover}
 									icon={<TwitterIcon sx={classes.customIcon} />}
@@ -66,7 +66,7 @@ function CNavBar() {
 						{!mobile && (
 							<>
 								<Box sx={{ width: "10.5px" }} />
-								<Fade delay={90} right>
+								<Fade delay={50} right>
 									<MenuIconContainer
 										classes={classes.hover}
 										icon={
@@ -85,7 +85,7 @@ function CNavBar() {
 				</Grid>
 				<Grid item>
 					{mobile && (
-						<Fade delay={100} right>
+						<Fade delay={50} right>
 							<MenuIcon
 								sx={{ ...classes.desktopMenu, ...classes.hover }}
 								onClick={handleDrawer}
