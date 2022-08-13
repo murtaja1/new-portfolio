@@ -31,32 +31,33 @@ function CNavBar() {
 				<Grid item></Grid>
 				<Grid item>
 					<Grid container alignItems="center" alignSelf="center">
-						<a href={externalURLS.linkedIn} target="_blank">
-							<Fade delay={10} top>
+						<Fade delay={100} top>
+							<a href={externalURLS.linkedIn} target="_blank">
 								<LinkedInIcon
 									sx={{ ...classes.regularIcon, ...classes.hover }}
 								/>
-							</Fade>
-						</a>
-						<a href={externalURLS.facebook} target="_blank">
-							<Fade delay={20} top>
+							</a>
+						</Fade>
+						<Box sx={{ width: "5px" }} />
+						<Fade delay={200} top>
+							<a href={externalURLS.facebook} target="_blank">
 								<FacebookIcon
 									sx={{ ...classes.regularIcon, ...classes.hover }}
 								/>
-							</Fade>
-						</a>
-						<Box sx={{ width: "5px" }} />
-						<a href={externalURLS.github} target="_blank">
-							<Fade delay={30} top>
+							</a>
+						</Fade>
+						<Box sx={{ width: "10px" }} />
+						<Fade delay={300} top>
+							<a href={externalURLS.github} target="_blank">
 								<IconContainer
 									classes={classes.hover}
 									icon={<GitHubIcon sx={classes.customIcon} />}
 								/>
-							</Fade>
-						</a>
-						<Box sx={{ width: "10.5px" }} />
+							</a>
+						</Fade>
+						<Box sx={{ width: "15.5px" }} />
 						<a href={externalURLS.twitter} target="_blank">
-							<Fade delay={40} top>
+							<Fade delay={400} top>
 								<IconContainer
 									classes={classes.hover}
 									icon={<TwitterIcon sx={classes.customIcon} />}
@@ -65,7 +66,7 @@ function CNavBar() {
 						</a>
 						{!mobile && (
 							<>
-								<Box sx={{ width: "10.5px" }} />
+								<Box sx={{ width: "15.5px" }} />
 								<Fade delay={50} right>
 									<MenuIconContainer
 										classes={classes.hover}
@@ -74,6 +75,7 @@ function CNavBar() {
 												onClick={handleDrawer}
 												sx={{
 													fontSize: "30px",
+													color: "text.secondary",
 												}}
 											/>
 										}

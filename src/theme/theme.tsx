@@ -34,12 +34,12 @@ const theme = createTheme({
       fontWeight: '400'
     }, 
     h2:{
-      fontSize: "20px",
+      fontSize: "32px",
       fontWeight: '400'
       
     },  
     h3:{
-      fontSize: "17px",
+      fontSize: "20px",
       fontWeight: '400'
     }, 
     h4:{

@@ -14,10 +14,11 @@ const styles = {
 		color: "primary.main",
 	},
 	desktopMenu: {
-    cursor:"pointer",
+		cursor: "pointer",
 		fontSize: "35px",
 		marginTop: "9px",
 		marginRight: "30px",
+		color: "text.secondary",
 	},
 	hover: {
 		transitionDuration: "0.5s",
