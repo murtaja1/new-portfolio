@@ -47,11 +47,11 @@ const theme = createTheme({
       fontWeight: 'bold'
     }, 
     h5:{
-      fontSize: "12px",
+      fontSize: "15px",
       fontWeight: '400'
     }, 
     h6:{
-      fontSize: "5px",
+      fontSize: "10px",
       fontWeight: '300'
     },
     button: {
