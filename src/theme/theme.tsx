@@ -44,14 +44,14 @@ const theme = createTheme({
     }, 
     h4:{
       fontSize: "17px",
-      fontWeight: '300'
+      fontWeight: 'bold'
     }, 
     h5:{
       fontSize: "12px",
       fontWeight: '400'
     }, 
     h6:{
-      fontSize: "11px",
+      fontSize: "5px",
       fontWeight: '300'
     },
     button: {
