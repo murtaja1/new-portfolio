@@ -13,7 +13,6 @@ export const theme = createTheme({
 						position: "absolute",
 						"&:hover": {
 							"& .innerBox": {
-
 								background:
 									"linear-gradient(0deg, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.3) 90%)",
 								position: "absolute",
@@ -53,14 +52,8 @@ export const DivGrow = styled("div")({
 	animation: "grow 1s infinite ease",
 	position: "relative",
 	transform: "translate(-50%, -50%)",
-	width: "80px",
-	height: "80px",
-	borderRadius: "50%",
-	backgroundColor: "black",
+	width: "60px",
+	height: "60px",
 	zIndex: "999",
-	display: "flex",
-	alignItems: "center",
-	justifyContent: "center",
-	color: "white",
 	cursor: "none",
 });

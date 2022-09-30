@@ -1,11 +1,6 @@
 import { useState } from "react";
 
-import {
-	Box,
-	Grid,
-	ThemeProvider,
-	Typography,
-} from "@mui/material";
+import { Box, Grid, ThemeProvider, Typography } from "@mui/material";
 
 import image from "../../assets/find.png";
 import { DivGrow, theme } from "../style";
@@ -52,7 +47,10 @@ function ProjectCard() {
 								}}
 								onClick={handleDrawer}
 							>
-								{openDrawer ? "Boom..." : "Hit It!"}
+								<Typography variant="body2" sx={{ color: "black" }}>
+									{openDrawer ? "Boom..." : "Hit It!"}
+								</Typography>
+								<img src="/gun.svg" alt="d" width={"100%"} />
 							</DivGrow>
 
 							<Grid container className="grid">

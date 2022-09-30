@@ -8,10 +8,10 @@ function Projects() {
 	const mobile = useMediaQuery("(min-width:600px)");
 
 	return (
-		<Container
+		<Container maxWidth='xl'
 			sx={{ mt: mobile ? "100px" : "10px", mb: mobile ? "10px" : "100px" }}
 		>
-			<Grid container justifyContent="center" alignItems="center" spacing={5}>
+			<Grid container justifyContent="center" alignItems="center" spacing={3}>
 				{h.map((_, index) => (
 					<Grid key={index} item>
 						<ProjectCard />
