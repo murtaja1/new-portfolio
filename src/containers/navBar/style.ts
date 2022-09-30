@@ -1,8 +1,8 @@
 const styles = {
 	container: {
 		position: "fixed",
-		paddingTop: "20px",
 		width: "100%",
+		zIndex: 1,
 	},
 	regularIcon: {
 		marginTop: "5px",

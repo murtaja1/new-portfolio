@@ -5,28 +5,18 @@ export const theme = createTheme({
 		MuiGrid: {
 			styleOverrides: {
 				root: {
-					"& .MuiBox-root": {
+					"& .outerBox": {
 						borderRadius: "8.5px",
 						height: "299px",
 						width: "400px",
 						overflow: "hidden",
-						backgroundColor: "transparent",
 						position: "absolute",
-						"& .innerBox": {
-							"&.hoverDiv": {
-								transform: "scale(1.2)",
-								WebkitTransform: "scale(1.2)",
-								background: "red",
-							},
-							height: "300px",
-							width: "400px",
-							backgroundColor: "transparent",
-							display: "none",
-						},
 						"&:hover": {
-							background:
-								"linear-gradient(0deg, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.3) 90%)",
-							"& .MuiBox-root": {
+							"& .innerBox": {
+
+								background:
+									"linear-gradient(0deg, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.3) 90%)",
+								position: "absolute",
 								display: "block",
 								"& .grid": {
 									position: "absolute",
@@ -34,6 +24,12 @@ export const theme = createTheme({
 									padding: "10px",
 								},
 							},
+						},
+						"& .innerBox": {
+							height: "300px",
+							width: "100%",
+							backgroundColor: "transparent",
+							display: "none",
 						},
 					},
 				},

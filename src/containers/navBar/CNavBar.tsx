@@ -23,6 +23,7 @@ function CNavBar() {
 			sx={{
 				...classes.container,
 				bottom: mobile ? "" : "10px",
+				top: mobile ? "20px" :"",
 			}}
 		>
 			<NavDrawer open={openDrawer} handleDrawer={handleDrawer} />
