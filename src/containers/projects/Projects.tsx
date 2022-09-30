@@ -1,10 +1,10 @@
 import { Container, Grid, useMediaQuery } from "@mui/material";
-import WorkCard from "../../components/work/WorkCard";
+import ProjectCard from "../../components/project/ProjectCard";
 
 const h = ["React.js", "JavaScript", "JavaScript", "JavaScript", "JavaScript"];
 const links = ["Repo", "Preview"];
 
-function Work() {
+function Projects() {
 	const mobile = useMediaQuery("(min-width:600px)");
 
 	return (
@@ -14,7 +14,7 @@ function Work() {
 			<Grid container justifyContent="center" alignItems="center" spacing={5}>
 				{h.map((_, index) => (
 					<Grid key={index} item>
-						<WorkCard />
+						<ProjectCard />
 					</Grid>
 				))}
 			</Grid>
@@ -22,4 +22,4 @@ function Work() {
 	);
 }
 
-export default Work;
+export default Projects;

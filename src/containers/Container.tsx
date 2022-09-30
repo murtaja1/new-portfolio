@@ -4,8 +4,8 @@ import Contact from "./contact/Contact";
 import Home from "./home/Home";
 import CNavBar from "./navBar/CNavBar";
 import NotFound from "./notFound/NotFound";
-import Skills from "./skills/Skills";
-import Work from "./work/Work";
+import Skills from "./about/About";
+import Projects from "./projects/Projects";
 
 function Container() {
 	return (
@@ -13,8 +13,8 @@ function Container() {
 			<CNavBar />
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/work" element={<Work />} />
-				<Route path="/skills" element={<Skills />} />
+				<Route path="/projects" element={<Projects />} />
+				<Route path="/about" element={<Skills />} />
 				<Route path="/contact" element={<Contact />} />
 				<Route path="*" element={<NotFound />} />
 			</Routes>

@@ -9,14 +9,14 @@ import {
 
 import image from "../../assets/find.png";
 import { DivGrow, theme } from "../style";
-import WorkDrawer from "./WorkDrawer";
+import ProjectDrawer from "./ProjectDrawer";
 
 const Slide = require("react-reveal/Slide");
 
 const h = ["React.js", "JavaScript", "Python", "JavaScript", "Python"];
 const links = ["Repo", "Preview"];
 
-function WorkCard() {
+function ProjectCard() {
 	const [coords, setCoords] = useState({ x: 0, y: 0 });
 	const [openDrawer, setOpenDrawer] = useState(false);
 
@@ -104,7 +104,7 @@ function WorkCard() {
 					</Box>
 				</Grid>
 			</ThemeProvider>
-			<WorkDrawer
+			<ProjectDrawer
 				open={openDrawer}
 				image={image}
 				handleDrawer={handleDrawer}
@@ -115,4 +115,4 @@ function WorkCard() {
 	);
 }
 
-export default WorkCard;
+export default ProjectCard;

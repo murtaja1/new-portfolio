@@ -1,4 +1,4 @@
-export interface WorkDrawerProps {
+export interface ProjectDrawerProps {
 	open: boolean;
 	image: string;
 	techs: string[];

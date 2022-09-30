@@ -10,15 +10,15 @@ import {
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import LaunchOutlinedIcon from "@mui/icons-material/LaunchOutlined";
 
-import { WorkDrawerProps } from "./types";
+import { ProjectDrawerProps } from "./types";
 
-const WorkDrawer = ({
+const ProjectDrawer = ({
 	open,
 	image,
 	techs,
 	links,
 	handleDrawer,
-}: WorkDrawerProps) => {
+}: ProjectDrawerProps) => {
 	const mobile = useMediaQuery("(min-width:600px)");
 	return (
 		<Drawer open={open} onClose={handleDrawer} anchor="right">
@@ -193,4 +193,4 @@ const WorkDrawer = ({
 	);
 };
 
-export default WorkDrawer;
+export default ProjectDrawer;
