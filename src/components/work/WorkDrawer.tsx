@@ -1,128 +1,24 @@
 import {
+	useMediaQuery,
+	Drawer,
 	Box,
 	Grid,
-	ThemeProvider,
-	Typography,
-	Drawer,
-	Divider,
 	IconButton,
-	useMediaQuery,
+	Typography,
+	Divider,
 } from "@mui/material";
-import { useEffect, useState } from "react";
-import image from "../assets/find.png";
-import { DivGrow, theme } from "./style";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import LaunchOutlinedIcon from "@mui/icons-material/LaunchOutlined";
-const Slide = require("react-reveal/Slide");
 
-const h = ["React.js", "JavaScript", "Python", "JavaScript", "Python"];
-const links = ["Repo", "Preview"];
+import { WorkDrawerProps } from "./types";
 
-function WorkCard() {
-	const [coords, setCoords] = useState({ x: 0, y: 0 });
-	const [openDrawer, setOpenDrawer] = useState(false);
-
-	const handleDrawer = () => {
-		setOpenDrawer(!openDrawer);
-	};
-
-	const handleMouseMovement = (e: any) => {
-		setCoords({
-			x: e.pageX - e.currentTarget.offsetLeft,
-			y: e.pageY - e.currentTarget.offsetTop,
-		});
-	};
-
-	return (
-		<>
-			<ThemeProvider theme={theme}>
-				<Grid
-					onMouseMove={handleMouseMovement}
-					sx={{
-						position: "relative",
-						height: "299px",
-						width: "400px",
-						borderRadius: "8.5px",
-					}}
-				>
-					<Box className="outerBox">
-						<Box className="innerBox">
-							<DivGrow
-								style={{
-									left: `${coords.x - 40}px`,
-									top: `${coords.y - 40}px`,
-								}}
-								onClick={handleDrawer}
-							>
-								{openDrawer ? "Boom..." : "Hit It!"}
-							</DivGrow>
-
-							<Grid container className="grid">
-								<Slide delay={50} up>
-									<Grid item xs={12}>
-										<Typography
-											variant="h4"
-											sx={{ fontWeight: "bold", color: "white" }}
-										>
-											Seat Score
-										</Typography>
-									</Grid>
-									<Grid item xs={12}>
-										<Typography variant="h6">
-											An attendance management system!
-										</Typography>
-									</Grid>
-									<Grid item xs={12}>
-										{h.map((e, index) => (
-											<Grid
-												key={index}
-												item
-												sx={{
-													bgcolor: "gray",
-													width: "70px",
-													height: "20px",
-													display: "inline-block",
-													borderRadius: "25px",
-													margin: "5px",
-												}}
-											>
-												<Typography
-													textAlign="center"
-													sx={{
-														color: "white",
-														paddingTop: "2px",
-														fontSize: "12px",
-													}}
-												>
-													{e}
-												</Typography>
-											</Grid>
-										))}
-									</Grid>
-								</Slide>
-							</Grid>
-						</Box>
-						<img
-							src={image}
-							width="100%"
-							height="300"
-							// style={{ borderRadius: "9px" }}
-						/>
-					</Box>
-				</Grid>
-			</ThemeProvider>
-			<CardDrawer open={openDrawer} handleDrawer={handleDrawer} />
-		</>
-	);
-}
-
-export default WorkCard;
-
-interface CardDrawerProps {
-	open: boolean;
-	handleDrawer: () => void;
-}
-const CardDrawer = ({ open, handleDrawer }: CardDrawerProps) => {
+const WorkDrawer = ({
+	open,
+	image,
+	techs,
+	links,
+	handleDrawer,
+}: WorkDrawerProps) => {
 	const mobile = useMediaQuery("(min-width:600px)");
 	return (
 		<Drawer open={open} onClose={handleDrawer} anchor="right">
@@ -210,7 +106,7 @@ const CardDrawer = ({ open, handleDrawer }: CardDrawerProps) => {
 						>
 							Technologies:
 						</Typography>
-						{h.map((e, index) => (
+						{techs.map((e, index) => (
 							<Box
 								key={index}
 								sx={{
@@ -296,3 +192,5 @@ const CardDrawer = ({ open, handleDrawer }: CardDrawerProps) => {
 		</Drawer>
 	);
 };
+
+export default WorkDrawer;
