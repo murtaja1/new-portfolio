@@ -11,14 +11,14 @@ function Projects() {
 			maxWidth="lg"
 			sx={{ mt: mobile ? "100px" : "10px", mb: mobile ? "10px" : "100px" }}
 		>
-			<Grid container justifyContent="center" alignItems="center" spacing={3}>
+			<Grid container justifyContent="center" alignItems="center" spacing={1}>
 				<Grid item xs={10}>
 					<Typography variant="h2" sx={{ fontWeight: "bold" }}>
 						Projects:
 					</Typography>
 				</Grid>
 				{h.map((_, index) => (
-					<Grid key={index} item xs={5}>
+					<Grid key={index} item xs={12} sm={8} md={5}>
 						<ProjectCard />
 					</Grid>
 				))}

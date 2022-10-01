@@ -168,8 +168,8 @@ const ProjectDrawer = ({
 					bottom: "0",
 					height: "50px",
 					bgcolor: "black",
-					width: "500px",
-					display: "inline-flex",
+					width: mobile ? "500px" : "100%",
+					display: "flex",
 					justifyContent: "center",
 					alignItems: "center",
 				}}

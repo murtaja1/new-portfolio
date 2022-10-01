@@ -34,7 +34,7 @@ function ProjectCard() {
 					sx={{
 						position: "relative",
 						height: "299px",
-						width: "400px",
+						width: "100%",
 						borderRadius: "8.5px",
 					}}
 				>

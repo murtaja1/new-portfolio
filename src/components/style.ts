@@ -8,7 +8,7 @@ export const theme = createTheme({
 					"& .outerBox": {
 						borderRadius: "8.5px",
 						height: "299px",
-						width: "400px",
+						width: "100%",
 						overflow: "hidden",
 						position: "absolute",
 						"&:hover": {
