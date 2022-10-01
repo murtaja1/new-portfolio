@@ -6,6 +6,7 @@ import git from "../../assets/git.svg";
 import redux from "../../assets/redux.svg";
 import reactBootstrap from "../../assets/reactBootstrap.js";
 import typescript from "../../assets/typescript.svg";
+import javascript from "../../assets/javascript.svg";
 import postgres from "../../assets/postgres.svg";
 import firebase from "../../assets/firebase.svg";
 import dart from "../../assets/dart.svg";
@@ -164,6 +165,7 @@ export const languages = [
 		top: "210px",
 		left: "510px",
 	},
+
 	// sixth column
 	{
 		icon: python,
@@ -191,6 +193,26 @@ export const languages = [
 		sDelay: "3.4s",
 		top: "210px",
 		left: "640px",
+	},
+
+	// sixth column
+	{
+		icon: material,
+		name: "MATERIAL",
+		color: "#f0db4f",
+		delay: 3600,
+		sDelay: "3.6s",
+		top: "10px",
+		left: "770px",
+	},
+	{
+		icon: javascript,
+		name: "JAVASCRIPT",
+		color: "#f0db4f",
+		delay: 3800,
+		sDelay: "3.8s",
+		top: "110px",
+		left: "770px",
 	},
 ];
 
