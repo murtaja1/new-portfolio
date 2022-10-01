@@ -18,6 +18,7 @@ import vue from "../../assets/vue.svg";
 import python from "../../assets/python.svg";
 import css from "../../assets/css.svg";
 import bootstrap from "../../assets/bootstrap.svg";
+import github from "../../assets/github.svg";
 
 import styled from "@emotion/styled";
 
@@ -33,8 +34,8 @@ export const languages = [
 		left: "0px",
 	},
 	{
-		icon: postgres,
-		name: "POSTGRES",
+		icon: javascript,
+		name: "JAVASCRIPT",
 		color: "#e34f26",
 		delay: 400,
 		sDelay: "0.2s",
@@ -42,8 +43,8 @@ export const languages = [
 		left: "0px",
 	},
 	{
-		icon: firebase,
-		name: "Firebase",
+		icon: react,
+		name: "REACT",
 		color: "#0048BA",
 		delay: 800,
 		sDelay: "0.4s",
@@ -81,8 +82,8 @@ export const languages = [
 
 	// third column
 	{
-		icon: django,
-		name: "DJANGO",
+		icon: bootstrap,
+		name: "BOOTSTRAP",
 		color: "#f0db4f",
 		delay: 1600,
 		sDelay: "1.2s",
@@ -90,8 +91,8 @@ export const languages = [
 		left: "260px",
 	},
 	{
-		icon: flask,
-		name: "FLASK",
+		icon: vue,
+		name: "VUE",
 		color: "#f0db4f",
 		delay: 1800,
 		sDelay: "1.4s",
@@ -99,8 +100,8 @@ export const languages = [
 		left: "260px",
 	},
 	{
-		icon: git,
-		name: "GIT",
+		icon: html,
+		name: "HTML",
 		color: "#f0db4f",
 		delay: 2000,
 		sDelay: "1.6s",
@@ -110,8 +111,8 @@ export const languages = [
 
 	// forth column
 	{
-		icon: database,
-		name: "DATABASE",
+		icon: css,
+		name: "CSS",
 		color: "#f0db4f",
 		delay: 2200,
 		sDelay: "1.8s",
@@ -119,8 +120,8 @@ export const languages = [
 		left: "390px",
 	},
 	{
-		icon: flutter,
-		name: "FLUTTER",
+		icon: material,
+		name: "MATERIAL",
 		color: "#f0db4f",
 		delay: 2400,
 		sDelay: "2s",
@@ -128,8 +129,8 @@ export const languages = [
 		left: "390px",
 	},
 	{
-		icon: dart,
-		name: "DART",
+		icon: database,
+		name: "DATABASE",
 		color: "#f0db4f",
 		delay: 2600,
 		sDelay: "2.2s",
@@ -139,8 +140,8 @@ export const languages = [
 
 	// fifth column
 	{
-		icon: html,
-		name: "HTML",
+		icon: flutter,
+		name: "FLUTTER",
 		color: "#f0db4f",
 		delay: 2800,
 		sDelay: "2.4s",
@@ -148,8 +149,8 @@ export const languages = [
 		left: "510px",
 	},
 	{
-		icon: react,
-		name: "REACT.JS",
+		icon: dart,
+		name: "DART",
 		color: "#f0db4f",
 		delay: 3000,
 		sDelay: "2.6s",
@@ -157,8 +158,8 @@ export const languages = [
 		left: "510px",
 	},
 	{
-		icon: vue,
-		name: "VUE.JS",
+		icon: postgres,
+		name: "POSTGRES",
 		color: "#f0db4f",
 		delay: 3200,
 		sDelay: "2.8s",
@@ -177,8 +178,8 @@ export const languages = [
 		left: "640px",
 	},
 	{
-		icon: css,
-		name: "CSS",
+		icon: django,
+		name: "DJANGO",
 		color: "#f0db4f",
 		delay: 3200,
 		sDelay: "3.2s",
@@ -186,8 +187,8 @@ export const languages = [
 		left: "640px",
 	},
 	{
-		icon: bootstrap,
-		name: "BOOTSTRAP",
+		icon: flask,
+		name: "FLASK",
 		color: "#f0db4f",
 		delay: 3400,
 		sDelay: "3.4s",
@@ -197,8 +198,8 @@ export const languages = [
 
 	// sixth column
 	{
-		icon: material,
-		name: "MATERIAL",
+		icon: firebase,
+		name: "FIREBASE",
 		color: "#f0db4f",
 		delay: 3600,
 		sDelay: "3.6s",
@@ -206,12 +207,21 @@ export const languages = [
 		left: "770px",
 	},
 	{
-		icon: javascript,
-		name: "JAVASCRIPT",
+		icon: git,
+		name: "GIT",
 		color: "#f0db4f",
 		delay: 3800,
 		sDelay: "3.8s",
 		top: "110px",
+		left: "770px",
+	},
+	{
+		icon: github,
+		name: "GITHUB",
+		color: "#f0db4f",
+		delay: 4000,
+		sDelay: "4s",
+		top: "210px",
 		left: "770px",
 	},
 ];
