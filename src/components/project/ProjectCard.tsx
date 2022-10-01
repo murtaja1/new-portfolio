@@ -50,7 +50,26 @@ function ProjectCard() {
 								<Typography variant="body2" sx={{ color: "black" }}>
 									{openDrawer ? "Boom..." : "Hit It!"}
 								</Typography>
-								<img src="/gun.svg" alt="d" width={"100%"} />
+								<Box
+									sx={{
+										"@keyframes projectGun": !openDrawer
+											? ""
+											: {
+													"0%": {
+														transform: "rotate(0deg)",
+													},
+													"50%": {
+														transform: "rotate(-15deg)",
+													},
+													"100%": {
+														transform: "rotate(0deg)",
+													},
+											  },
+										animation: !openDrawer ? "" : "projectGun 0.1s 1",
+									}}
+								>
+									<img src="/gun.svg" alt="d" width={"100%"} />
+								</Box>
 							</DivGrow>
 
 							<Grid container className="grid">
