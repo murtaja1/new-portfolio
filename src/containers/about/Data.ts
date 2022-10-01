@@ -226,8 +226,8 @@ export const languages = [
 	},
 ];
 
-export const DivGrow = styled("div")({
-	"@keyframes grow": {
+export const SkillIconAnimation = styled("div")({
+	"@keyframes SkillIconAnimation": {
 		"0%": {
 			width: "10px",
 			top: "0",
@@ -241,11 +241,29 @@ export const DivGrow = styled("div")({
 			top: "40",
 		},
 	},
-	animation: "grow 4s 1",
+	animation: "SkillIconAnimation 4s 1",
 	position: "absolute",
 	width: "60px",
 	height: "60px",
-	// display:"flex",
-	// flexDirection:"column",
-	// alignItems:"center"
+	transition: "transform .2s",
+	"&:hover": {
+		transform: "scale(1.3)",
+		"-webkit-transform": "scale(1.3)",
+	},
+});
+
+export const GunIconAnimation = styled("div")({
+	"@keyframes GunIconAnimation": {
+		"0%": {
+			transform: "rotate(0deg)",
+		},
+		"50%": {
+			transform: "rotate(10deg)",
+		},
+		"100%": {
+			transform: "rotate(0deg)",
+		},
+	},
+	animation: "GunIconAnimation 0.1s 42",
+	animationDelay: "0.2s",
 });
