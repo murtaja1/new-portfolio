@@ -245,10 +245,9 @@ export const SkillIconAnimation = styled("div")({
 	position: "absolute",
 	width: "60px",
 	height: "60px",
-	transition: "transform .2s",
 	"&:hover": {
+		transition: "transform .2s",
 		transform: "scale(1.3)",
-		"-webkit-transform": "scale(1.3)",
 	},
 });
 
