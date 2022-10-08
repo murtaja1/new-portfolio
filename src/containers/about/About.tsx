@@ -35,7 +35,7 @@ function About() {
 					alignItems="center"
 					columnSpacing={6}
 					rowSpacing={4}
-					sx={{ overflow: "hidden", pb: "10px" }}
+					sx={{ pb: "10px" }}
 					xs={11.5}
 					sm={11}
 					lg={10}
@@ -70,37 +70,23 @@ function About() {
 				<Grid item xs={11} lg={10}>
 					<AboutCard
 						title="Front-end Development Experience"
-						body="Over the past two years, I have been developing and participating in
-						different kinds of projects with various technologies and languages.
-						One of the projects is a smart attendance web application called
-						Seat Score, the other is a mobile application for delivery and more.
-						As a software developer by training and at heart I invest in my
-						learning to become a better developer and delivery high quality
-						work."
+						body="Most of my development experience lies in the front-end field as I have about two years of
+						 experience and have <number> of projects, including the projects that
+						I am most proud of which Seat Score which is an Attendance Management System
+						 with its portfolio, Find Yours which was my graduation project with my team and The Iraqi student."
 					/>
 				</Grid>
 				<Grid item xs={11} lg={10}>
 					<AboutCard
 						title="Mobile Development Experience"
-						body="Over the past two years, I have been developing and participating in
-						different kinds of projects with various technologies and languages.
-						One of the projects is a smart attendance web application called
-						Seat Score, the other is a mobile application for delivery and more.
-						As a software developer by training and at heart I invest in my
-						learning to become a better developer and delivery high quality
-						work."
+						body="I use Flutter for my mobile applications as I have develop and participated in some mobile apps @ Integrated Path, including Reeh which is 
+						two apps in one app😁."
 					/>
 				</Grid>
 				<Grid item xs={11} lg={10}>
 					<AboutCard
 						title="Back-end Development Experience"
-						body="Over the past two years, I have been developing and participating in
-						different kinds of projects with various technologies and languages.
-						One of the projects is a smart attendance web application called
-						Seat Score, the other is a mobile application for delivery and more.
-						As a software developer by training and at heart I invest in my
-						learning to become a better developer and delivery high quality
-						work."
+						body="I use Django and Python for the backend, I have developed the backend for the Iraqi Student and participated in the backend of Seat Score."
 					/>
 				</Grid>
 			</Grid>
