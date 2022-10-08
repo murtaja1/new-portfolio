@@ -9,16 +9,18 @@ import Projects from "./projects/Projects";
 
 function Container() {
 	return (
-		<BrowserRouter>
-			<CNavBar />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/projects" element={<Projects />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/contact" element={<Contact />} />
-				<Route path="*" element={<NotFound />} />
-			</Routes>
-		</BrowserRouter>
+		<div style={{ overflow: "hidden" }}>
+			<BrowserRouter>
+				<CNavBar />
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/projects" element={<Projects />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/contact" element={<Contact />} />
+					<Route path="*" element={<NotFound />} />
+				</Routes>
+			</BrowserRouter>
+		</div>
 	);
 }
 

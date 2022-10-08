@@ -7,11 +7,13 @@ import {
 	Grid,
 	Snackbar,
 	Typography,
+	useMediaQuery,
 } from "@mui/material";
 
 import emailjs from "@emailjs/browser";
 import BasicTextField from "../../components/textFields/BasicTextField";
 const Bounce = require("react-reveal/Bounce");
+const Fade = require("react-reveal/Fade");
 
 function Contact() {
 	const [message, setMessage] = useState({
@@ -25,6 +27,7 @@ function Contact() {
 		error: false,
 		message: "",
 	});
+	const mobile = useMediaQuery("(max-width:600px)");
 
 	const handleCloseSnack = () => {
 		setSnackBar({ ...snackBar, state: false });
@@ -86,7 +89,13 @@ function Contact() {
 	};
 
 	return (
-		<Container maxWidth="md" sx={{ mt: "100px" }}>
+		<Container
+			maxWidth="md"
+			sx={{
+				mt: mobile ? "10px" : "100px",
+				mb: mobile ? "100px" : "100px",
+			}}
+		>
 			<Grid container spacing={2} justifyContent="space-around">
 				<Grid item xs={12}>
 					<Box sx={{ mt: "10px" }}>
@@ -126,50 +135,62 @@ function Contact() {
 				</Grid>
 
 				<Grid item xs={12} sm={6}>
-					<BasicTextField
-						multiline={false}
-						value={message.firstName}
-						name={"firstName"}
-						placeholder={"First Name"}
-						onChange={handleChange}
-					/>
+					<Fade left delay={100}>
+						<BasicTextField
+							multiline={false}
+							value={message.firstName}
+							name={"firstName"}
+							placeholder={"First Name"}
+							onChange={handleChange}
+						/>
+					</Fade>
 				</Grid>
 				<Grid item xs={12} sm={6}>
-					<BasicTextField
-						multiline={false}
-						value={message.lastName}
-						name={"lastName"}
-						placeholder={"Last Name"}
-						onChange={handleChange}
-					/>
+					<Fade right delay={100}>
+						<BasicTextField
+							multiline={false}
+							value={message.lastName}
+							name={"lastName"}
+							placeholder={"Last Name"}
+							onChange={handleChange}
+						/>
+					</Fade>
 				</Grid>
 				<Grid item xs={12}>
-					<BasicTextField
-						multiline={false}
-						value={message.email}
-						name={"email"}
-						placeholder={"Email"}
-						onChange={handleChange}
-					/>
+					<Fade left delay={100}>
+						<BasicTextField
+							multiline={false}
+							value={message.email}
+							name={"email"}
+							placeholder={"Email"}
+							onChange={handleChange}
+						/>
+					</Fade>
 				</Grid>
 				<Grid item xs={12}>
-					<BasicTextField
-						multiline={true}
-						value={message.description}
-						name={"description"}
-						placeholder={"Description"}
-						onChange={handleChange}
-					/>
+					<Fade right delay={100}>
+						<BasicTextField
+							multiline={true}
+							value={message.description}
+							name={"description"}
+							placeholder={"Description"}
+							onChange={handleChange}
+						/>
+					</Fade>
 				</Grid>
-				<Grid item xs={12}>
-					<Button
-						type="submit"
-						sx={{ bg: "red" }}
-						variant="contained"
-						onClick={handleCheckBeforeSubmit}
-					>
-						submit
-					</Button>
+				<Grid item sx={{ textAlign: "center" }} xs={12}>
+					<Fade left delay={100}>
+						<Button
+							sx={{
+								bgcolor: "primary.light",
+								"&:hover": { bgcolor: "primary.light" },
+							}}
+							variant="contained"
+							onClick={handleCheckBeforeSubmit}
+						>
+							submit
+						</Button>
+					</Fade>
 				</Grid>
 			</Grid>
 			<Snackbar
