@@ -20,7 +20,7 @@ import css from "../../assets/css.svg";
 import bootstrap from "../../assets/bootstrap.svg";
 import github from "../../assets/github.svg";
 
-import styled from "@emotion/styled";
+import { createTheme } from "@mui/material";
 
 export const languages = [
 	// first column
@@ -29,7 +29,7 @@ export const languages = [
 		name: "TYPESCRIPT",
 		color: "",
 		delay: 200,
-		sDelay: "0s",
+		aniDelay: "0s",
 		top: "10px",
 		left: "0px",
 	},
@@ -38,7 +38,7 @@ export const languages = [
 		name: "JAVASCRIPT",
 		color: "#e34f26",
 		delay: 400,
-		sDelay: "0.2s",
+		aniDelay: "0.2s",
 		top: "110px",
 		left: "0px",
 	},
@@ -47,7 +47,7 @@ export const languages = [
 		name: "REACT",
 		color: "#0048BA",
 		delay: 800,
-		sDelay: "0.4s",
+		aniDelay: "0.4s",
 		top: "210px",
 		left: "0px",
 	},
@@ -57,7 +57,7 @@ export const languages = [
 		name: "REDUX",
 		color: "#00d8ff",
 		delay: 1000,
-		sDelay: "0.6s",
+		aniDelay: "0.6s",
 		top: "10px",
 		left: "130px",
 	},
@@ -66,7 +66,7 @@ export const languages = [
 		name: "React-bootstrap",
 		color: "#f0db4f",
 		delay: 1200,
-		sDelay: "0.8s",
+		aniDelay: "0.8s",
 		top: "110px",
 		left: "130px",
 	},
@@ -75,7 +75,7 @@ export const languages = [
 		name: "Vue-bootstrap",
 		color: "",
 		delay: 1400,
-		sDelay: "1s",
+		aniDelay: "1s",
 		top: "210px",
 		left: "130px",
 	},
@@ -86,7 +86,7 @@ export const languages = [
 		name: "BOOTSTRAP",
 		color: "#f0db4f",
 		delay: 1600,
-		sDelay: "1.2s",
+		aniDelay: "1.2s",
 		top: "10px",
 		left: "260px",
 	},
@@ -95,7 +95,7 @@ export const languages = [
 		name: "VUE",
 		color: "#f0db4f",
 		delay: 1800,
-		sDelay: "1.4s",
+		aniDelay: "1.4s",
 		top: "110px",
 		left: "260px",
 	},
@@ -104,7 +104,7 @@ export const languages = [
 		name: "HTML",
 		color: "#f0db4f",
 		delay: 2000,
-		sDelay: "1.6s",
+		aniDelay: "1.6s",
 		top: "210px",
 		left: "260px",
 	},
@@ -115,7 +115,7 @@ export const languages = [
 		name: "CSS",
 		color: "#f0db4f",
 		delay: 2200,
-		sDelay: "1.8s",
+		aniDelay: "1.8s",
 		top: "10px",
 		left: "390px",
 	},
@@ -124,7 +124,7 @@ export const languages = [
 		name: "MATERIAL",
 		color: "#f0db4f",
 		delay: 2400,
-		sDelay: "2s",
+		aniDelay: "2s",
 		top: "110px",
 		left: "390px",
 	},
@@ -133,7 +133,7 @@ export const languages = [
 		name: "DATABASE",
 		color: "#f0db4f",
 		delay: 2600,
-		sDelay: "2.2s",
+		aniDelay: "2.2s",
 		top: "210px",
 		left: "390px",
 	},
@@ -144,7 +144,7 @@ export const languages = [
 		name: "FLUTTER",
 		color: "#f0db4f",
 		delay: 2800,
-		sDelay: "2.4s",
+		aniDelay: "2.4s",
 		top: "10px",
 		left: "510px",
 	},
@@ -153,7 +153,7 @@ export const languages = [
 		name: "DART",
 		color: "#f0db4f",
 		delay: 3000,
-		sDelay: "2.6s",
+		aniDelay: "2.6s",
 		top: "110px",
 		left: "510px",
 	},
@@ -162,7 +162,7 @@ export const languages = [
 		name: "POSTGRES",
 		color: "#f0db4f",
 		delay: 3200,
-		sDelay: "2.8s",
+		aniDelay: "2.8s",
 		top: "210px",
 		left: "510px",
 	},
@@ -173,7 +173,7 @@ export const languages = [
 		name: "PYTHON",
 		color: "#f0db4f",
 		delay: 3000,
-		sDelay: "3s",
+		aniDelay: "3s",
 		top: "10px",
 		left: "640px",
 	},
@@ -182,7 +182,7 @@ export const languages = [
 		name: "DJANGO",
 		color: "#f0db4f",
 		delay: 3200,
-		sDelay: "3.2s",
+		aniDelay: "3.2s",
 		top: "110px",
 		left: "640px",
 	},
@@ -191,7 +191,7 @@ export const languages = [
 		name: "FLASK",
 		color: "#f0db4f",
 		delay: 3400,
-		sDelay: "3.4s",
+		aniDelay: "3.4s",
 		top: "210px",
 		left: "640px",
 	},
@@ -202,7 +202,7 @@ export const languages = [
 		name: "FIREBASE",
 		color: "#f0db4f",
 		delay: 3600,
-		sDelay: "3.6s",
+		aniDelay: "3.6s",
 		top: "10px",
 		left: "770px",
 	},
@@ -211,7 +211,7 @@ export const languages = [
 		name: "GIT",
 		color: "#f0db4f",
 		delay: 3800,
-		sDelay: "3.8s",
+		aniDelay: "3.8s",
 		top: "110px",
 		left: "770px",
 	},
@@ -220,49 +220,38 @@ export const languages = [
 		name: "GITHUB",
 		color: "#f0db4f",
 		delay: 4000,
-		sDelay: "4s",
+		aniDelay: "4s",
 		top: "210px",
 		left: "770px",
 	},
 ];
 
-export const SkillIconAnimation = styled("div")({
-	"@keyframes SkillIconAnimation": {
-		"0%": {
-			width: "10px",
-			top: "0",
-		},
-		"50%": {
-			width: "15px",
-			top: "0",
-		},
-		"100%": {
-			width: "60px",
-			top: "40",
-		},
-	},
-	animation: "SkillIconAnimation 4s 1",
-	position: "absolute",
-	width: "60px",
-	height: "60px",
-	"&:hover": {
-		transition: "transform .2s",
-		transform: "scale(1.3)",
-	},
-});
-
-export const GunIconAnimation = styled("div")({
-	"@keyframes GunIconAnimation": {
-		"0%": {
-			transform: "rotate(0deg)",
-		},
-		"50%": {
-			transform: "rotate(10deg)",
-		},
-		"100%": {
-			transform: "rotate(0deg)",
+export const theme = createTheme({
+	components: {
+		MuiGrid: {
+			styleOverrides: {
+				root: {
+					"&.outerBox": {
+						"@keyframes SkillIconAnimation": {
+							"0%": {
+								transition: "transform .2s",
+								transform: "scale(0.5)",
+							},
+							"100%": {
+								transition: "transform .2s",
+								transform: "scale(1.3)",
+							},
+						},
+						"&:hover": {
+							"& .innerBox": {
+								animation: `SkillIconAnimation 1s 1`,
+								transition: "transform .2s",
+								transform: "scale(1.3)",
+							},
+						},
+					},
+				},
+			},
 		},
 	},
-	animation: "GunIconAnimation 0.1s 42",
-	animationDelay: "0.2s",
 });
