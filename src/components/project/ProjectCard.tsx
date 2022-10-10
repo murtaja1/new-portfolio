@@ -5,13 +5,18 @@ import { Box, Grid, ThemeProvider, Typography } from "@mui/material";
 import image from "../../assets/find.png";
 import { DivGrow, theme } from "../style";
 import ProjectDrawer from "./ProjectDrawer";
+import { projectsData } from "../../services/constData";
+import { ProjectType } from "./types";
 
 const Slide = require("react-reveal/Slide");
 
-const h = ["React.js", "JavaScript", "Python", "JavaScript", "Python"];
-const links = ["Repo", "Preview"];
-
-function ProjectCard() {
+function ProjectCard({
+	project,
+	mobile,
+}: {
+	project: ProjectType;
+	mobile: boolean;
+}) {
 	const [coords, setCoords] = useState({ x: 0, y: 0 });
 	const [openDrawer, setOpenDrawer] = useState(false);
 
@@ -76,26 +81,27 @@ function ProjectCard() {
 								<Slide delay={50} up>
 									<Grid item xs={12}>
 										<Typography
-											variant="h4"
+											variant={mobile ? "body2" : "h4"}
 											sx={{ fontWeight: "bold", color: "white" }}
 										>
-											Seat Score
+											{project.title}
 										</Typography>
 									</Grid>
 									<Grid item xs={12}>
-										<Typography variant="h6">
-											An attendance management system!
+										<Typography variant={mobile ? "subtitle2" : "h6"}>
+											{project.cardDesc}
 										</Typography>
 									</Grid>
 									<Grid item xs={12}>
-										{h.map((e, index) => (
+										{project.tools.map((e, index) => (
 											<Grid
 												key={index}
 												item
 												sx={{
 													bgcolor: "gray",
-													width: "70px",
-													height: "20px",
+													px: "5px",
+													pt: "2px",
+													height: "25px",
 													display: "inline-block",
 													borderRadius: "25px",
 													margin: "5px",
@@ -117,16 +123,15 @@ function ProjectCard() {
 								</Slide>
 							</Grid>
 						</Box>
-						<img src={image} width="100%" height="300" />
+						<img src={project.img} width="100%" height="300" />
 					</Box>
 				</Grid>
 			</ThemeProvider>
 			<ProjectDrawer
 				open={openDrawer}
-				image={image}
 				handleDrawer={handleDrawer}
-				techs={h}
-				links={links}
+				project={project}
+				mobile={mobile}
 			/>
 		</>
 	);
