@@ -47,7 +47,7 @@ export const projectsData = [
 		title: "Seat Score Portfolio",
 		cardDesc: "A web applications to show seat score features.",
 		description:
-			"A web applications to show seat score features with dynamic content",
+			"A web applications to show seat score features with dynamic content.",
 		tools: ["Typescript", "React.js", "Material UI", "CSS", "HTML"],
 		link: "https://seat-score-portfolio.vercel.app/",
 		repo: "",
@@ -79,7 +79,7 @@ export const projectsData = [
 	{
 		img: find_yours,
 		title: "Find Yours",
-		cardDesc: "A web application that helps people find their...",
+		cardDesc: "A web application that helps people find their",
 		description:
 			"With its unique idea, Find Yours is a web application that helps people find their lost items and allow others to share the items they find.",
 		tools: ["JavaScrip", "React.js", "Material UI", "CSS", "HTML", "Firebase"],
@@ -90,7 +90,7 @@ export const projectsData = [
 	{
 		img: iraqiStudent,
 		title: "The Iraqi Student",
-		cardDesc: "A web app that contains the info about universities...",
+		cardDesc: "A web app that contains the info about universities.",
 		description:
 			"A web app that contains the info about universities, collage, department or institute  that every Iraqi student need to know before applying.",
 		tools: [
@@ -109,7 +109,7 @@ export const projectsData = [
 	{
 		img: weather,
 		title: "Weather",
-		cardDesc: "A user-friendly web application that tells you...",
+		cardDesc: "A user-friendly web application that tells you.",
 
 		description:
 			"A user-friendly web application that tells you the weather status for today and forecasts for the next five days only by typing your location.",
@@ -121,10 +121,10 @@ export const projectsData = [
 	{
 		img: collageScore,
 		title: "The Score",
-		cardDesc: "A clean web app developed to let student know",
+		cardDesc: "A web app developed to let student know.",
 
 		description:
-			"A clean web app developed to let student know the score of a collage, department or institute very easily by type the name only in Iraq.",
+			"A web app developed to let student know the score of a collage, department or institute very easily by type the name only in Iraq.",
 		tools: ["JavaScrip", "Vue.js", "Vue-Bootstrap", "CSS", "HTML"],
 		link: "https://murtaja1.github.io/collage_score/",
 		repo: "https://github.com/murtaja1/collage_score",

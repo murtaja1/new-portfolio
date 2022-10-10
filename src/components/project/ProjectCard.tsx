@@ -52,7 +52,9 @@ function ProjectCard({
 								}}
 								onClick={handleDrawer}
 							>
-								<Typography variant="body2" sx={{ color: "black" }}>
+								<Typography
+									sx={{ color: "white", position: "absolute", top: "20px", left:"20px", fontSize:"10px" }}
+								>
 									{openDrawer ? "Boom..." : "Hit It!"}
 								</Typography>
 								<Box
@@ -73,7 +75,7 @@ function ProjectCard({
 										animation: !openDrawer ? "" : "projectGun 0.1s 1",
 									}}
 								>
-									<img src="/gun.svg" alt="d" width={"100%"} />
+									<img src="/cursor.svg" alt="d" width={"100%"} />
 								</Box>
 							</DivGrow>
 
