@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { Box, Grid, ThemeProvider, Typography } from "@mui/material";
 
-import image from "../../assets/find.png";
+import Image from "./Image";
 import { DivGrow, theme } from "../style";
 import ProjectDrawer from "./ProjectDrawer";
 import { projectsData } from "../../services/constData";
@@ -53,7 +53,13 @@ function ProjectCard({
 								onClick={handleDrawer}
 							>
 								<Typography
-									sx={{ color: "white", position: "absolute", top: "20px", left:"20px", fontSize:"10px" }}
+									sx={{
+										color: "white",
+										position: "absolute",
+										top: "20px",
+										left: "20px",
+										fontSize: "10px",
+									}}
 								>
 									{openDrawer ? "Boom..." : "Hit It!"}
 								</Typography>
@@ -125,7 +131,13 @@ function ProjectCard({
 								</Slide>
 							</Grid>
 						</Box>
-						<img src={project.img} width="100%" height="300" />
+						<Image
+							src={project.img}
+							errorImg="https://via.placeholder.com/400x200.png?text=No+Image"
+							placeholderImg="https://via.placeholder.com/400x200.png?text=Loading..."
+							width="100%"
+							height="300"
+						/>
 					</Box>
 				</Grid>
 			</ThemeProvider>
