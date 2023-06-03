@@ -65,16 +65,22 @@ function Home() {
 							threshold={0.1}
 							rootMargin="20%"
 						>
-							Over the past two years, I have been developing and participating
-							in different kinds of projects with various technologies and
-							languages. One of the projects is a smart attendance web
-							application called Seat Score, the other is a mobile application
-							for delivery and more. As a software developer by training and at
-							heart I invest in my learning to become a better developer and
-							delivery high quality work.
+							Over the past three years, I've developed expertise as a software
+							developer, actively contributing to diverse projects involving
+							multiple technologies. Notably, I played a key role in building
+							Seat Score, a smart attendance web app, and a delivery mobile
+							application. My focus extends to Odoo development and
+							Implementation, an open-source ERP platform. With extensive
+							experience in Odoo, I've successfully implemented customized
+							solutions, streamlined business processes, and improved
+							operational efficiency for clients. As a dedicated and constantly
+							improving developer, I prioritize staying up-to-date with industry
+							trends. By combining technical expertise with a commitment to
+							delivering high-quality work, I consistently exceed expectations
+							and drive project success.
 						</AnimatedText>
 					</Typography>
-					<Zoom delay={8000}>
+					<Zoom delay={12500}>
 						<Box pt={1.5} mb={10} sx={{ textAlign: "center" }}>
 							<Button
 								sx={{
