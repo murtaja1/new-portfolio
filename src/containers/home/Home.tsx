@@ -65,12 +65,14 @@ function Home() {
 							threshold={0.1}
 							rootMargin="20%"
 						>
-							Over the past three years, I've developed expertise as a software
-							developer, actively contributing to diverse projects involving
-							multiple technologies. Notably, I played a key role in building
-							Seat Score, a smart attendance web app, and a delivery mobile
-							application. My focus extends to Odoo development and
-							Implementation, an open-source ERP platform. With extensive
+							Over the past three years, I have honed my skills in developing
+							various applications and have actively contributed to diverse
+							projects encompassing multiple technologies. I take pride in my
+							notable contributions to projects such as Seat Score, a
+							cutting-edge smart attendance web app, where I played a pivotal
+							role. Additionally, I successfully developed a highly efficient
+							delivery mobile application. My focus extends to Odoo development
+							and Implementation, an open-source ERP platform. With extensive
 							experience in Odoo, I've successfully implemented customized
 							solutions, streamlined business processes, and improved
 							operational efficiency for clients. As a dedicated and constantly

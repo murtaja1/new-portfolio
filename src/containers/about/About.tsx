@@ -69,24 +69,26 @@ function About() {
 				</Grid>
 				<Grid item xs={11} lg={10}>
 					<AboutCard
+						title="Odoo Development Experience"
+						body="I have experience in customizing Odoo modules and automation. I have Developed and participated in developing tailored solutions for a range of Odoo models, such as accounting, inventory, sales, HR, and more. Additionally, automated Odoo’s processes, improving efficiency and optimizing operations."
+					/>
+				</Grid>
+				<Grid item xs={11} lg={10}>
+					<AboutCard
 						title="Front-end Development Experience"
-						body="Most of my development experience lies in the front-end field as I have about two years of
-						 experience and have <number> of projects, including the projects that
-						I am most proud of which Seat Score which is an Attendance Management System
-						 with its portfolio, Find Yours which was my graduation project with my team and The Iraqi student."
+						body="I have extensive experience in front-end development, utilizing technologies such as React.js, and Vue.js. I create dynamic and intuitive user interfaces, leveraging the strengths of each technology to deliver high-quality experiences."
 					/>
 				</Grid>
 				<Grid item xs={11} lg={10}>
 					<AboutCard
 						title="Mobile Development Experience"
-						body="I use Flutter for my mobile applications as I have develop and participated in some mobile apps @ Integrated Path, including Reeh which is 
-						two apps in one app😁."
+						body="I have extensive experience in mobile app development using Flutter and React Native. With Flutter, I create cross-platform apps with a fast development cycle and impressive UI components. I also utilize React Native to build robust apps for iOS and Android platforms, focusing on code reusability and excellent user interfaces."
 					/>
 				</Grid>
 				<Grid item xs={11} lg={10}>
 					<AboutCard
 						title="Back-end Development Experience"
-						body="I use Django and Python for the backend, I have developed the backend for the Iraqi Student and participated in the backend of Seat Score."
+						body="I have actively participated in projects utilizing Django and Python, gaining extensive experience in these frameworks. Additionally, I have acquired valuable expertise in Flask, further enhancing my backend development skills."
 					/>
 				</Grid>
 			</Grid>
